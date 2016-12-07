@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_hot"
+            android:icon="@drawable/ic_fire"
+            android:title="@string/nav_hot" />
+        <item
+            android:id="@+id/nav_tech"
+            android:icon="@drawable/ic_news"
+            android:title="@string/nav_tech" />
+        <item
+            android:id="@+id/nav_find"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="@string/nav_find" />
+        <item
+            android:id="@+id/nav_around"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="@string/nav_around" />
+    </group>
+
+    <item android:title="@string/drawer_other">
+        <menu>
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="@string/nav_about" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_qq"
+                android:title="@string/nav_contact" />
+        </menu>
+    </item>
+
+</menu>
