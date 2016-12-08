@@ -1,12 +1,14 @@
 package com.ouman.mordennews;
 
 import android.content.Context;
+import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -52,7 +54,7 @@ public class HotFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
         //fragment的布局代码在这里写吧应该是,下面的代码中好几处要用到getActivity，很显然要创建了activity之后才能获得
-        newsArray = new ArrayList<HotNewsModel>();
+        newsArray = new ArrayList<>();
         for (int i=1; i<30; i++){
             HotNewsModel news = new HotNewsModel();
             news.setTitle("习近平来到中南大学参观");
@@ -65,22 +67,9 @@ public class HotFragment extends Fragment {
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(manager);
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                switch (newState){
-                    case 0:
-                        System.out.println("======<<<<<停止滑动了");
-                        break;
-                    case 1:
-                        System.out.println("======<<<<<开始滑动了");
-
-                        break;
-                }
-            }
-        });
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.recyclerview_spacing);
+        recyclerView.addItemDecoration(new SpaceItemDecoration(spacingInPixels));
 
         HotRecyclerViewAdapter adapter = new HotRecyclerViewAdapter(getActivity(), newsArray);
         recyclerView.setAdapter(adapter);
@@ -113,4 +102,18 @@ public class HotFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         void onFragmentInteraction(Uri uri);
     }
+
+    public class SpaceItemDecoration extends RecyclerView.ItemDecoration{
+        private int space;
+        public SpaceItemDecoration(int space) {
+            this.space = space;
+        }
+        @Override
+        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+            if(parent.getChildPosition(view) != 0)
+                outRect.top = space;
+        }
+    }
 }
+
+

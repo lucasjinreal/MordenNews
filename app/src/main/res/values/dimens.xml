@@ -9,4 +9,7 @@
     <dimen name="cardview_elevation">3dp</dimen>
     <dimen name="cardview_margin">16dp</dimen>
     <dimen name="cardview_radius">4dp</dimen>
+    <dimen name="recyclerview_spacing">10dp</dimen>
+    <dimen name="cardview_padding">6dp</dimen>
+    <dimen name="cardview_margin_top">4dp</dimen>
 </resources>
