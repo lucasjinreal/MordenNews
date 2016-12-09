@@ -15,7 +15,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:toolbarId="@+id/toolbar"
+            app:toolbarId="@+id/toolbar_news_detail"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
             app:contentScrim="?attr/colorPrimary">
@@ -25,10 +25,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@android:drawable/sym_def_app_icon"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/bk1" />
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/toolbar_news_detail"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"></android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -53,8 +54,11 @@
                 android:layout_width="match_parent"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
-                android:layout_height="280dp"
-                app:contentPadding="@dimen/cardview_padding">
+                app:contentPadding="@dimen/cardview_padding"
+                android:layout_height="350dp"
+                android:layout_marginLeft="@dimen/cardview_margin"
+                android:layout_marginRight="@dimen/cardview_margin"
+                android:layout_margin="@dimen/cardview_margin_top">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
