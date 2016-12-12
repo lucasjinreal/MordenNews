@@ -17,7 +17,8 @@
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
         android:layout_marginBottom="@dimen/cardview_margin_top"
-        android:layout_marginTop="@dimen/cardview_margin_top">
+        android:layout_marginTop="@dimen/cardview_margin_top"
+        android:id="@+id/hot_recyclerview">
 
         <RelativeLayout
             android:layout_width="match_parent"
