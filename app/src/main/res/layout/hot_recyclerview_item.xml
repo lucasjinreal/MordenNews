@@ -18,7 +18,7 @@
         android:foreground="?attr/selectableItemBackground"
         android:layout_marginBottom="@dimen/cardview_margin_top"
         android:layout_marginTop="@dimen/cardview_margin_top"
-        android:id="@+id/hot_recyclerview">
+        android:id="@+id/hot_recyclerview_cardview">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +26,6 @@
 
             <TextView
                 android:text="TextView"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginStart="24dp"
@@ -34,7 +33,8 @@
                 android:id="@+id/tv_title"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_width="150dp" />
 
             <ImageView
                 app:srcCompat="@mipmap/portrait2"

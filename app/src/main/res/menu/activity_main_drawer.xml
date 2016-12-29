@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_hot"
-            android:icon="@drawable/ic_fire"
+            android:icon="@drawable/ic_zhihu"
             android:title="@string/nav_hot" />
         <item
             android:id="@+id/nav_tech"

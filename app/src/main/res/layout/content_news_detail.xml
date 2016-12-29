@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.ouman.mordennews.NewsDetailActivity"
+    tools:showIn="@layout/activity_news_detail">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/cardview_padding"
+        android:layout_margin="@dimen/cardview_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_article"
+            android:id="@+id/news_detail_textview"
+            android:layout_marginTop="87dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/author_imageview"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="11dp" />
+
+        <TextView
+            android:text="@string/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/author_imageview"
+            android:layout_toRightOf="@+id/author_imageview"
+            android:layout_toEndOf="@+id/author_imageview"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:id="@+id/author_name"
+            android:textSize="14sp"
+            android:textStyle="normal|bold"
+            android:lineSpacingExtra="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/author_imageview"
+            android:layout_alignLeft="@+id/author_name"
+            android:layout_alignStart="@+id/author_name"
+            android:id="@+id/author_bio"
+            tools:text="@string/author"
+            android:textSize="12sp"
+            android:lineSpacingExtra="10sp" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</android.support.v4.widget.NestedScrollView>
